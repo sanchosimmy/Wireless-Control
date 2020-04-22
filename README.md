@@ -7,6 +7,7 @@
 @author Sabitha Susan Joseph 
 
 Changes in master.
+changes in local Repo
 
 Appliances can be controlled via switches on a control board or a bluetooth mobile app. This project is developed for Tiva C tm4c123gh6pm uC. It can control following appliances:
 
