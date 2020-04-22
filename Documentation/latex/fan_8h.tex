@@ -1,0 +1,77 @@
+\hypertarget{fan_8h}{}\doxysection{C\+:/\+Users/\+Akshay/workspace\+\_\+v6\+\_\+0/\+Wireless\+\_\+\+Control/fan.h File Reference}
+\label{fan_8h}\index{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/fan.h@{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/fan.h}}
+
+
+Functionn prototypes for fan controlling.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for fan.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{fan_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fan_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fan_8h_a3aa310cfa76c5690786c4e386ee229d9}\label{fan_8h_a3aa310cfa76c5690786c4e386ee229d9}} 
+void \mbox{\hyperlink{fan_8h_a3aa310cfa76c5690786c4e386ee229d9}{Fan\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes fan S\+CR driving port pin and A\+DC pin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fan_8h_a4867ab95fc15e966bf62fd86e3f6b51c}\label{fan_8h_a4867ab95fc15e966bf62fd86e3f6b51c}} 
+void \mbox{\hyperlink{fan_8h_a4867ab95fc15e966bf62fd86e3f6b51c}{Fan\+\_\+\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Turns on the fan, Fan speed rxed from \mbox{\hyperlink{fan_8h_a5459e7f51c969d8b256e9b5586317f92}{Fan\+\_\+\+Speed\+\_\+\+Update(int8\+\_\+t)}} function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fan_8h_a07cd289f0eeb148213b422ce96e71f5a}\label{fan_8h_a07cd289f0eeb148213b422ce96e71f5a}} 
+void \mbox{\hyperlink{fan_8h_a07cd289f0eeb148213b422ce96e71f5a}{Fan\+\_\+\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Turns off fan speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fan_8h_a5459e7f51c969d8b256e9b5586317f92}{Fan\+\_\+\+Speed\+\_\+\+Update}} (int8\+\_\+t)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functionn prototypes for fan controlling. 
+
+HA + Middle layer. In case of reset of board, Saved last fan speed will be set. Requires gloabalvariable.\+h access for M\+A\+X\+F\+A\+N\+S\+P\+E\+ED value. (i)Initializes relevant port pin as an o/p, A\+DC pin and two timers. (ii)Calculates AC voltage from A\+DC reading. (iii)Depending on AC rms vtg and user provided speed, Calculates trigger delay after zero crossing of AC vtg for scr driving. (iv)In case of voltage fluctuation speed of fan will remain same.
+
+\begin{DoxyAuthor}{Author}
+Akshay Pampatwar 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15th April 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fan_8h_a5459e7f51c969d8b256e9b5586317f92}\label{fan_8h_a5459e7f51c969d8b256e9b5586317f92}} 
+\index{fan.h@{fan.h}!Fan\_Speed\_Update@{Fan\_Speed\_Update}}
+\index{Fan\_Speed\_Update@{Fan\_Speed\_Update}!fan.h@{fan.h}}
+\doxysubsubsection{\texorpdfstring{Fan\_Speed\_Update()}{Fan\_Speed\_Update()}}
+{\footnotesize\ttfamily void Fan\+\_\+\+Speed\+\_\+\+Update (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+Changes fan speed. 
+\begin{DoxyParams}{Parameters}
+{\em Fan\+Speed} & Fan speed from 0 to 5. lower limit should not be less than 0. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 126 of file fan.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{fan_8h_a5459e7f51c969d8b256e9b5586317f92_cgraph}
+\end{center}
+\end{figure}

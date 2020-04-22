@@ -1,0 +1,4 @@
+<map id="AcVtgRms" name="AcVtgRms">
+<area shape="rect" id="node1" title=" " alt="" coords="164,5,249,32"/>
+<area shape="rect" id="node2" href="$fan_8c.html#a34151cc19c669d08c8af5a052f124036" title="Takes sampled adc value and calls AcVtgRms(uint32_t) to save AC rms vtg." alt="" coords="5,5,116,32"/>
+</map>

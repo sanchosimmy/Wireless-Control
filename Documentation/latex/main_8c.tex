@@ -1,0 +1,62 @@
+\hypertarget{main_8c}{}\doxysection{C\+:/\+Users/\+Akshay/workspace\+\_\+v6\+\_\+0/\+Wireless\+\_\+\+Control/main.c File Reference}
+\label{main_8c}\index{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/main.c@{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/main.c}}
+
+
+This is a main file.  
+
+
+{\ttfamily \#include \char`\"{}system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bluetooth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}plug.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fan.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}commonheader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globalvariable.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_aa25f2f7d400183f548ec805c54eaa9fc}\label{main_8c_aa25f2f7d400183f548ec805c54eaa9fc}} 
+void \mbox{\hyperlink{main_8c_aa25f2f7d400183f548ec805c54eaa9fc}{control\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes controller -\/ Application layer function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a92539439d06079cdfd5271a4648412f5}{controller}} (void)
+\item 
+\mbox{\Hypertarget{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}\label{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}} 
+void {\bfseries main} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a main file. 
+
+Consists of controller. Regularly scan for change in input using global variables. \begin{DoxyAuthor}{Author}
+Akshay Pampatwar 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+9th April 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a92539439d06079cdfd5271a4648412f5}\label{main_8c_a92539439d06079cdfd5271a4648412f5}} 
+\index{main.c@{main.c}!controller@{controller}}
+\index{controller@{controller}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{controller()}{controller()}}
+{\footnotesize\ttfamily void controller (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Controller\+: Controls whole flow of operation
+
+Sends updated command to appliances. Requires data from global variable.\+h 
+
+Definition at line 66 of file main.\+c.
+

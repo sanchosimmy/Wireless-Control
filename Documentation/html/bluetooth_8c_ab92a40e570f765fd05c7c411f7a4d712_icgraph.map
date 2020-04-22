@@ -1,0 +1,5 @@
+<map id="Sys_UartInit" name="Sys_UartInit">
+<area shape="rect" id="node1" title=" " alt="" coords="256,5,349,32"/>
+<area shape="rect" id="node2" href="$bluetooth_8h.html#a3931d6c801713463f51609ad20223707" title="Wireless input initialization for UART to serially communicate with bluetooth module." alt="" coords="139,5,208,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#aa25f2f7d400183f548ec805c54eaa9fc" title="Initializes controller &#45; Application layer function." alt="" coords="5,5,91,32"/>
+</map>

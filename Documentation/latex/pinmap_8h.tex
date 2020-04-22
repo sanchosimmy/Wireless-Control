@@ -1,0 +1,177 @@
+\hypertarget{pinmap_8h}{}\doxysection{C\+:/\+Users/\+Akshay/workspace\+\_\+v6\+\_\+0/\+Wireless\+\_\+\+Control/pinmap.h File Reference}
+\label{pinmap_8h}\index{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/pinmap.h@{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/pinmap.h}}
+
+
+Pin assignment of i/p \& o/p of appliances with uC.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}driverlib/gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/pin\+\_\+map.\+h\char`\"{}}\newline
+Include dependency graph for pinmap.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pinmap_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pinmap_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pinmap_8h_afc65d1b0a36790c8ae7da5086d728527}\label{pinmap_8h_afc65d1b0a36790c8ae7da5086d728527}} 
+\#define {\bfseries Plug1\+\_\+\+SW}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0
+\item 
+\mbox{\Hypertarget{pinmap_8h_a3e56951e803b2091754b0cc18b9885a8}\label{pinmap_8h_a3e56951e803b2091754b0cc18b9885a8}} 
+\#define {\bfseries Plug2\+\_\+\+SW}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+1
+\item 
+\mbox{\Hypertarget{pinmap_8h_a454ba58f31ecd6ad47389d354e130064}\label{pinmap_8h_a454ba58f31ecd6ad47389d354e130064}} 
+\#define {\bfseries Led\+\_\+\+SW}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+2
+\item 
+\mbox{\Hypertarget{pinmap_8h_a71cc70193716ec33a70ab244665bee1f}\label{pinmap_8h_a71cc70193716ec33a70ab244665bee1f}} 
+\#define {\bfseries Fan\+\_\+\+SW}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3
+\item 
+\mbox{\Hypertarget{pinmap_8h_a2d70166aad758b72dcea20001c1a26e7}\label{pinmap_8h_a2d70166aad758b72dcea20001c1a26e7}} 
+\#define {\bfseries Led\+\_\+\+Inc\+\_\+\+SW}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+4
+\item 
+\mbox{\Hypertarget{pinmap_8h_a2302ccf3a83f7dde981265daef4f13b1}\label{pinmap_8h_a2302ccf3a83f7dde981265daef4f13b1}} 
+\#define {\bfseries Led\+\_\+\+Dec\+\_\+\+SW}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+5
+\item 
+\mbox{\Hypertarget{pinmap_8h_a935a3cc29014893956cd0865c8cd937a}\label{pinmap_8h_a935a3cc29014893956cd0865c8cd937a}} 
+\#define {\bfseries Fan\+\_\+\+Inc\+\_\+\+SW}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+6
+\item 
+\mbox{\Hypertarget{pinmap_8h_a74a0c0af9db83c63feeb83835af6aba6}\label{pinmap_8h_a74a0c0af9db83c63feeb83835af6aba6}} 
+\#define {\bfseries Fan\+\_\+\+Dec\+\_\+\+SW}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+7
+\item 
+\mbox{\Hypertarget{pinmap_8h_a57ce07898fd2d28e93ed59568ba682f9}\label{pinmap_8h_a57ce07898fd2d28e93ed59568ba682f9}} 
+\#define {\bfseries Fan\+\_\+\+State}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3
+\item 
+\mbox{\Hypertarget{pinmap_8h_add12e0168c8b9e91c84855c3869b0948}\label{pinmap_8h_add12e0168c8b9e91c84855c3869b0948}} 
+\#define {\bfseries Led\+\_\+\+State}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+2
+\item 
+\mbox{\Hypertarget{pinmap_8h_a6a5cd8913182f7d82127c74deb13407d}\label{pinmap_8h_a6a5cd8913182f7d82127c74deb13407d}} 
+\#define {\bfseries Fan\+\_\+1}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+2
+\item 
+\mbox{\Hypertarget{pinmap_8h_a4c6e71246541f67eef72bd519402ec46}\label{pinmap_8h_a4c6e71246541f67eef72bd519402ec46}} 
+\#define {\bfseries Fan\+\_\+2}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3
+\item 
+\mbox{\Hypertarget{pinmap_8h_a41c885b4baea527d888d66c6675d51d8}\label{pinmap_8h_a41c885b4baea527d888d66c6675d51d8}} 
+\#define {\bfseries Fan\+\_\+3}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0
+\item 
+\mbox{\Hypertarget{pinmap_8h_ab8e9b7a2ed1b2cccaf73d5f62936578e}\label{pinmap_8h_ab8e9b7a2ed1b2cccaf73d5f62936578e}} 
+\#define {\bfseries Fan\+\_\+4}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+4
+\item 
+\mbox{\Hypertarget{pinmap_8h_a3c6072b9070f1fb0b794ac434ab092a8}\label{pinmap_8h_a3c6072b9070f1fb0b794ac434ab092a8}} 
+\#define {\bfseries Fan\+\_\+5}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0
+\item 
+\mbox{\Hypertarget{pinmap_8h_a832524b1941a55145906337cb19e4cb5}\label{pinmap_8h_a832524b1941a55145906337cb19e4cb5}} 
+\#define {\bfseries Plug1\+\_\+\+State}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+2
+\item 
+\mbox{\Hypertarget{pinmap_8h_ab7d79da5c4739034f3e1813803f4355e}\label{pinmap_8h_ab7d79da5c4739034f3e1813803f4355e}} 
+\#define {\bfseries Plug2\+\_\+\+State}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3
+\item 
+\mbox{\Hypertarget{pinmap_8h_a5938ef724b5a81ffecf8f1499c1e8397}\label{pinmap_8h_a5938ef724b5a81ffecf8f1499c1e8397}} 
+\#define {\bfseries Plug1\+\_\+\+Op}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+5
+\item 
+\mbox{\Hypertarget{pinmap_8h_a47c4193d49419fb36023036ed4d40c71}\label{pinmap_8h_a47c4193d49419fb36023036ed4d40c71}} 
+\#define {\bfseries Plug2\+\_\+\+Op}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+6
+\item 
+\mbox{\Hypertarget{pinmap_8h_a8039d8bb76f824f5d0d16f0d80c5deba}\label{pinmap_8h_a8039d8bb76f824f5d0d16f0d80c5deba}} 
+\#define {\bfseries Fan\+\_\+\+Scr\+\_\+\+Op}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+7
+\item 
+\mbox{\Hypertarget{pinmap_8h_a0e118bb281f2fa34a137cfb21bddf807}\label{pinmap_8h_a0e118bb281f2fa34a137cfb21bddf807}} 
+\#define {\bfseries Led\+\_\+\+Op}~G\+P\+I\+O\+\_\+\+P\+F4\+\_\+\+T2\+C\+C\+P0
+\item 
+\mbox{\Hypertarget{pinmap_8h_a2e603822a0d3c45d48fded379ea01d2a}\label{pinmap_8h_a2e603822a0d3c45d48fded379ea01d2a}} 
+\#define {\bfseries Led\+\_\+\+Op\+\_\+\+Pin}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+4
+\item 
+\mbox{\Hypertarget{pinmap_8h_a4128de22dc90ee4d9129bdcdec59ac32}\label{pinmap_8h_a4128de22dc90ee4d9129bdcdec59ac32}} 
+\#define {\bfseries Z\+CD}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+5
+\item 
+\mbox{\Hypertarget{pinmap_8h_a977a75afcd68a84a4c27828336d5dbc5}\label{pinmap_8h_a977a75afcd68a84a4c27828336d5dbc5}} 
+\#define {\bfseries A\+C\+\_\+\+IN}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+2
+\item 
+\mbox{\Hypertarget{pinmap_8h_a278e098e1898f109000c4bce78f3c416}\label{pinmap_8h_a278e098e1898f109000c4bce78f3c416}} 
+\#define {\bfseries Bt\+\_\+\+En}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+5
+\item 
+\mbox{\Hypertarget{pinmap_8h_acff1b6b27bb18a5a6681117fce921506}\label{pinmap_8h_acff1b6b27bb18a5a6681117fce921506}} 
+\#define {\bfseries Bt\+\_\+\+Tx}~G\+P\+I\+O\+\_\+\+P\+D7\+\_\+\+U2\+TX
+\item 
+\mbox{\Hypertarget{pinmap_8h_a09452d708e807888e4ff8906ee53edb9}\label{pinmap_8h_a09452d708e807888e4ff8906ee53edb9}} 
+\#define {\bfseries Bt\+\_\+\+Rx}~G\+P\+I\+O\+\_\+\+P\+D6\+\_\+\+U2\+RX
+\item 
+\mbox{\Hypertarget{pinmap_8h_aed61975b933eb3fba752ae0dbfec924d}\label{pinmap_8h_aed61975b933eb3fba752ae0dbfec924d}} 
+\#define {\bfseries Bt\+\_\+\+Tx\+\_\+\+Pin}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+7
+\item 
+\mbox{\Hypertarget{pinmap_8h_ad2ffd8015da8bd0647a4ac25d5ed63f3}\label{pinmap_8h_ad2ffd8015da8bd0647a4ac25d5ed63f3}} 
+\#define {\bfseries Bt\+\_\+\+Rx\+\_\+\+Pin}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+6
+\item 
+\mbox{\Hypertarget{pinmap_8h_a32916a847090b087076a5bec92c78c33}\label{pinmap_8h_a32916a847090b087076a5bec92c78c33}} 
+\#define {\bfseries G\+P\+I\+O\+\_\+1}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0
+\item 
+\mbox{\Hypertarget{pinmap_8h_ae5b14b85fd16cf9cc9c37cecf533f83b}\label{pinmap_8h_ae5b14b85fd16cf9cc9c37cecf533f83b}} 
+\#define {\bfseries G\+P\+I\+O\+\_\+2}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+1
+\item 
+\mbox{\Hypertarget{pinmap_8h_a90d2d5c526ce5c0a551f533eccbee71a}\label{pinmap_8h_a90d2d5c526ce5c0a551f533eccbee71a}} 
+\#define {\bfseries A\+D\+C1}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+4
+\item 
+\mbox{\Hypertarget{pinmap_8h_a1803853d40a775230d2bd01a8a15ea91}\label{pinmap_8h_a1803853d40a775230d2bd01a8a15ea91}} 
+\#define {\bfseries Rx}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+4
+\item 
+\mbox{\Hypertarget{pinmap_8h_abbb96fbbe5d24b8f12a1fae621ced4d3}\label{pinmap_8h_abbb96fbbe5d24b8f12a1fae621ced4d3}} 
+\#define {\bfseries Tx}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+5
+\item 
+\mbox{\Hypertarget{pinmap_8h_a538e3ec60828cfabae7e3011d73d2093}\label{pinmap_8h_a538e3ec60828cfabae7e3011d73d2093}} 
+\#define {\bfseries P\+WM}~G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3
+\item 
+\mbox{\Hypertarget{pinmap_8h_a549c6fea143151843c75309dd1e8a0c8}\label{pinmap_8h_a549c6fea143151843c75309dd1e8a0c8}} 
+\#define {\bfseries Port\+A\+\_\+\+Ip\+Mask}~( Led\+\_\+\+Inc\+\_\+\+SW $\vert$ Led\+\_\+\+Dec\+\_\+\+SW $\vert$ Fan\+\_\+\+Inc\+\_\+\+SW $\vert$ Fan\+\_\+\+Dec\+\_\+\+SW )
+\item 
+\mbox{\Hypertarget{pinmap_8h_a25fa364d63b3c1c6738e14eff6e427e6}\label{pinmap_8h_a25fa364d63b3c1c6738e14eff6e427e6}} 
+\#define {\bfseries Port\+A\+\_\+\+Op\+Mask}~( Fan\+\_\+\+State $\vert$ Led\+\_\+\+State )
+\item 
+\mbox{\Hypertarget{pinmap_8h_aeb1855ded2da259d262c3ba6ba0014cf}\label{pinmap_8h_aeb1855ded2da259d262c3ba6ba0014cf}} 
+\#define {\bfseries Port\+B\+\_\+\+Ip\+Mask}~( 0 )
+\item 
+\mbox{\Hypertarget{pinmap_8h_ab32dd7a51884ba21af9caa5ac5826023}\label{pinmap_8h_ab32dd7a51884ba21af9caa5ac5826023}} 
+\#define {\bfseries Port\+B\+\_\+\+Op\+Mask}~( Fan\+\_\+1 $\vert$ Fan\+\_\+2 $\vert$ Bt\+\_\+\+En )
+\item 
+\mbox{\Hypertarget{pinmap_8h_ab19676f235654ab332017600cc6a3775}\label{pinmap_8h_ab19676f235654ab332017600cc6a3775}} 
+\#define {\bfseries Port\+C\+\_\+\+Ip\+Mask}~( 0 )
+\item 
+\mbox{\Hypertarget{pinmap_8h_afb3a68ddabf48e6bc6f85a14b31325c5}\label{pinmap_8h_afb3a68ddabf48e6bc6f85a14b31325c5}} 
+\#define {\bfseries Port\+C\+\_\+\+Op\+Mask}~( Fan\+\_\+4 $\vert$ Plug1\+\_\+\+Op $\vert$ Plug2\+\_\+\+Op $\vert$ Fan\+\_\+\+Scr\+\_\+\+Op)
+\item 
+\mbox{\Hypertarget{pinmap_8h_aaa6d797e7cbcb4965ad71cb91d838510}\label{pinmap_8h_aaa6d797e7cbcb4965ad71cb91d838510}} 
+\#define {\bfseries Port\+D\+\_\+\+Ip\+Mask}~( Plug1\+\_\+\+SW $\vert$ Plug2\+\_\+\+SW $\vert$ Led\+\_\+\+SW $\vert$ Fan\+\_\+\+SW )
+\item 
+\mbox{\Hypertarget{pinmap_8h_aab631e3c1c2d8e93f42769bafe43b80e}\label{pinmap_8h_aab631e3c1c2d8e93f42769bafe43b80e}} 
+\#define {\bfseries Port\+E\+\_\+\+Ip\+Mask}~( 0 )
+\item 
+\mbox{\Hypertarget{pinmap_8h_a32fbdf1228dc715809bc5a34348fdca4}\label{pinmap_8h_a32fbdf1228dc715809bc5a34348fdca4}} 
+\#define {\bfseries Port\+E\+\_\+\+Op\+Mask}~( Fan\+\_\+3 )
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pin assignment of i/p \& o/p of appliances with uC. 
+
+H\+AL\+: Hardware abstraction layer. Maps pin of tm4c123gh6pm uC with corresponding functionality. \begin{DoxyNote}{Note}
+U can only change P\+IN maping in the same port. i.\+e. If u want to change pin no. assignment in portA then updated pin should be assigned in a port A only. 
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+\$\+Akshay Pampatwar \$ 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+\$0.\+0 \$ 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+\$10th April 2020 \$ 
+\end{DoxyDate}

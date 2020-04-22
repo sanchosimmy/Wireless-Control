@@ -1,0 +1,137 @@
+\hypertarget{system_8c}{}\doxysection{C\+:/\+Users/\+Akshay/workspace\+\_\+v6\+\_\+0/\+Wireless\+\_\+\+Control/system.c File Reference}
+\label{system_8c}\index{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/system.c@{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/system.c}}
+
+
+Driver for peripherals of tm4c123gh6pm uC.  
+
+
+{\ttfamily \#include \char`\"{}system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pinmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}commonheader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bluetooth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/eeprom.\+h\char`\"{}}\newline
+Include dependency graph for system.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{system_8c_a4de2e91e78a7dc2a2501959f85ca1bb2}{Timer0\+Init}} (uint32\+\_\+t debounce)
+\item 
+\mbox{\Hypertarget{system_8c_a74ceb5fbff5fd971c473d77538d3ea8c}\label{system_8c_a74ceb5fbff5fd971c473d77538d3ea8c}} 
+void \mbox{\hyperlink{system_8c_a74ceb5fbff5fd971c473d77538d3ea8c}{Timer0\+Int\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em I\+SR for Timer0 \+: Reads port A and D, packs it and passed on to \mbox{\hyperlink{input_8c_aa824b14a8fe97b88f0ba0ed98a3e1791}{Gpip()}} fn in \mbox{\hyperlink{input_8c}{input.\+c}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{system_8c_adfdb874494a7e96ac1256869f1a7e9d4}\label{system_8c_adfdb874494a7e96ac1256869f1a7e9d4}} 
+void \mbox{\hyperlink{system_8c_adfdb874494a7e96ac1256869f1a7e9d4}{Sys\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes system with 20M\+Hz C\+PU Clock and enable clk to all required ports. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{system_8c_acf611d90e359ddd37bf100b55febf8bb}{Sys\+\_\+\+Gpip\+Init}} (uint32\+\_\+t debounce)
+\item 
+\mbox{\Hypertarget{system_8c_a858c121cead7d8b34a037695504b926e}\label{system_8c_a858c121cead7d8b34a037695504b926e}} 
+void \mbox{\hyperlink{system_8c_a858c121cead7d8b34a037695504b926e}{Sys\+\_\+\+Eeprom\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Init eeprom. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{system_8c_af287be012af33e6521b17064706323dc}{Sys\+\_\+\+Restore\+\_\+\+Byte}} (int8\+\_\+t address)
+\item 
+void \mbox{\hyperlink{system_8c_a95a32c6f93e18ebbb8ddd02e88014d01}{Sys\+\_\+\+Store\+\_\+\+Byte}} (int8\+\_\+t value, int8\+\_\+t address)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Driver for peripherals of tm4c123gh6pm uC. 
+
+\begin{DoxyAuthor}{Author}
+Akshay Pampatwar 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10th April 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{system_8c_acf611d90e359ddd37bf100b55febf8bb}\label{system_8c_acf611d90e359ddd37bf100b55febf8bb}} 
+\index{system.c@{system.c}!Sys\_GpipInit@{Sys\_GpipInit}}
+\index{Sys\_GpipInit@{Sys\_GpipInit}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{Sys\_GpipInit()}{Sys\_GpipInit()}}
+{\footnotesize\ttfamily void Sys\+\_\+\+Gpip\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{debounce }\end{DoxyParamCaption})}
+
+Initializes G\+P\+I\+Os as an input for switches and Timer 0 to take care of debounce. 
+\begin{DoxyParams}{Parameters}
+{\em debounce} & \+: Debounce Time setting for switches \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file system.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{system_8c_acf611d90e359ddd37bf100b55febf8bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8c_af287be012af33e6521b17064706323dc}\label{system_8c_af287be012af33e6521b17064706323dc}} 
+\index{system.c@{system.c}!Sys\_Restore\_Byte@{Sys\_Restore\_Byte}}
+\index{Sys\_Restore\_Byte@{Sys\_Restore\_Byte}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{Sys\_Restore\_Byte()}{Sys\_Restore\_Byte()}}
+{\footnotesize\ttfamily int8\+\_\+t Sys\+\_\+\+Restore\+\_\+\+Byte (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+Returns content from eeprom corresponding to address passed to it. 
+\begin{DoxyParams}{Parameters}
+{\em address} & 0 to n $\vert$ n belongs to Natural number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Byte (int8\+\_\+t)\+: From addressed passed 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a95a32c6f93e18ebbb8ddd02e88014d01}\label{system_8c_a95a32c6f93e18ebbb8ddd02e88014d01}} 
+\index{system.c@{system.c}!Sys\_Store\_Byte@{Sys\_Store\_Byte}}
+\index{Sys\_Store\_Byte@{Sys\_Store\_Byte}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{Sys\_Store\_Byte()}{Sys\_Store\_Byte()}}
+{\footnotesize\ttfamily void Sys\+\_\+\+Store\+\_\+\+Byte (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{value,  }\item[{int8\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+Store passed contents to an eeprom. 
+\begin{DoxyParams}{Parameters}
+{\em value} & 8 bit data which needs to be stored \\
+\hline
+{\em address} & 0 to n $\vert$ n belongs to Natural number \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a4de2e91e78a7dc2a2501959f85ca1bb2}\label{system_8c_a4de2e91e78a7dc2a2501959f85ca1bb2}} 
+\index{system.c@{system.c}!Timer0Init@{Timer0Init}}
+\index{Timer0Init@{Timer0Init}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{Timer0Init()}{Timer0Init()}}
+{\footnotesize\ttfamily void Timer0\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{debounce }\end{DoxyParamCaption})}
+
+Init Timer0 for periodic triggering of a I\+SR for scanning i/p. 
+\begin{DoxyParams}{Parameters}
+{\em debounce} & \+: mS \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 77 of file system.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{system_8c_a4de2e91e78a7dc2a2501959f85ca1bb2_cgraph}
+\end{center}
+\end{figure}

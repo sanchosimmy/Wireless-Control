@@ -1,0 +1,4 @@
+<map id="Fan_Speed_Update" name="Fan_Speed_Update">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,141,32"/>
+<area shape="rect" id="node2" href="$fan_8c.html#a9aba447a5922b004e5283c120e1b5782" title="Turns off fan if speed is 0." alt="" coords="189,5,300,32"/>
+</map>

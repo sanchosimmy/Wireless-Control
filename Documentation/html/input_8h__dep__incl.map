@@ -1,0 +1,6 @@
+<map id="C:/Users/Akshay/workspace_v6_0/Wireless_Control/input.h" name="C:/Users/Akshay/workspace_v6_0/Wireless_Control/input.h">
+<area shape="rect" id="node1" title="Function prototype for scanning switches and updating final status of input." alt="" coords="224,5,411,61"/>
+<area shape="rect" id="node2" href="$input_8c.html" title="Driver for scanning switches." alt="" coords="5,109,192,165"/>
+<area shape="rect" id="node3" href="$main_8c.html" title="This is a main file." alt="" coords="217,117,418,158"/>
+<area shape="rect" id="node4" href="$system_8c.html" title="Driver for peripherals of tm4c123gh6pm uC." alt="" coords="443,109,629,165"/>
+</map>

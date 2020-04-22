@@ -1,0 +1,56 @@
+\hypertarget{plug_8c}{}\doxysection{C\+:/\+Users/\+Akshay/workspace\+\_\+v6\+\_\+0/\+Wireless\+\_\+\+Control/plug.c File Reference}
+\label{plug_8c}\index{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/plug.c@{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/plug.c}}
+
+
+Driver for controlling two plugs.  
+
+
+{\ttfamily \#include \char`\"{}plug.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/tm4c123gh6pm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+ints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/sysctl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+memmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pinmap.\+h\char`\"{}}\newline
+Include dependency graph for plug.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plug_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{plug_8c_afdd27cd5af8469d18d7ff3bad9c7cfb1}\label{plug_8c_afdd27cd5af8469d18d7ff3bad9c7cfb1}} 
+void \mbox{\hyperlink{plug_8c_afdd27cd5af8469d18d7ff3bad9c7cfb1}{Plug\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Init corresponding gpio as an o/p. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{plug_8c_abb48fafcbd945aeb6edb6cadec89dbb6}\label{plug_8c_abb48fafcbd945aeb6edb6cadec89dbb6}} 
+void \mbox{\hyperlink{plug_8c_abb48fafcbd945aeb6edb6cadec89dbb6}{Plug1on}} ()
+\begin{DoxyCompactList}\small\item\em Turns on plug 1 and its indicator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{plug_8c_a3e21f978d02df2c8c04df254ddd73445}\label{plug_8c_a3e21f978d02df2c8c04df254ddd73445}} 
+void \mbox{\hyperlink{plug_8c_a3e21f978d02df2c8c04df254ddd73445}{Plug1off}} ()
+\begin{DoxyCompactList}\small\item\em Turns off plug 1 and its indicator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{plug_8c_aa658a7714b9dfcdfc0ee6717a013dd7e}\label{plug_8c_aa658a7714b9dfcdfc0ee6717a013dd7e}} 
+void \mbox{\hyperlink{plug_8c_aa658a7714b9dfcdfc0ee6717a013dd7e}{Plug2on}} ()
+\begin{DoxyCompactList}\small\item\em Turns on plug 2 and its indicator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{plug_8c_ab17f082224d56f57b486cc6d24bb6fee}\label{plug_8c_ab17f082224d56f57b486cc6d24bb6fee}} 
+void \mbox{\hyperlink{plug_8c_ab17f082224d56f57b486cc6d24bb6fee}{Plug2off}} ()
+\begin{DoxyCompactList}\small\item\em Turns off plug 2 and its indicator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Driver for controlling two plugs. 
+
+\begin{DoxyAuthor}{Author}
+Akshay Pampatwar 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15th April 2020 
+\end{DoxyDate}

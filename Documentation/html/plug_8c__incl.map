@@ -1,0 +1,14 @@
+<map id="C:/Users/Akshay/workspace_v6_0/Wireless_Control/plug.c" name="C:/Users/Akshay/workspace_v6_0/Wireless_Control/plug.c">
+<area shape="rect" id="node1" title="Driver for controlling two plugs." alt="" coords="257,5,454,47"/>
+<area shape="rect" id="node2" href="$plug_8h.html" title="Function prototypes for controlling two plugs." alt="" coords="5,95,63,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="24,169,89,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="114,169,189,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="339,95,481,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="506,95,605,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="367,169,471,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="629,95,743,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="767,95,898,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="922,95,1031,121"/>
+<area shape="rect" id="node11" href="$pinmap_8h.html" title="Pin assignment of i/p &amp; o/p of appliances with uC." alt="" coords="189,95,263,121"/>
+<area shape="rect" id="node12" title=" " alt="" coords="213,169,343,196"/>
+</map>

@@ -1,0 +1,200 @@
+\hypertarget{fan_8c}{}\doxysection{C\+:/\+Users/\+Akshay/workspace\+\_\+v6\+\_\+0/\+Wireless\+\_\+\+Control/fan.c File Reference}
+\label{fan_8c}\index{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/fan.c@{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/fan.c}}
+
+
+Driver for fan controlling.  
+
+
+{\ttfamily \#include \char`\"{}fan.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pinmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}commonheader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globalvariable.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\newline
+Include dependency graph for fan.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fan_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fan_8c_a247e994e275a565320db53bed9462426}\label{fan_8c_a247e994e275a565320db53bed9462426}} 
+\#define {\bfseries Scr\+Trigger\+Di}()~G\+P\+I\+O\+Int\+Disable(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+F\+\_\+\+B\+A\+SE, Z\+CD)
+\item 
+\mbox{\Hypertarget{fan_8c_a827d62ab62cd7dda6895929a0398709c}\label{fan_8c_a827d62ab62cd7dda6895929a0398709c}} 
+\#define {\bfseries Scr\+Trigger\+En}()~G\+P\+I\+O\+Int\+Enable(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+F\+\_\+\+B\+A\+SE, Z\+CD)
+\item 
+\mbox{\Hypertarget{fan_8c_a7713aee3ee0d3c813de5fff0e284aa77}\label{fan_8c_a7713aee3ee0d3c813de5fff0e284aa77}} 
+\#define {\bfseries S\+C\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+PW}~2
+\item 
+\mbox{\Hypertarget{fan_8c_aa89bc308de7044aed78b7744f8bd9f2d}\label{fan_8c_aa89bc308de7044aed78b7744f8bd9f2d}} 
+\#define {\bfseries Vrms\+\_\+\+Normal}~230
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fan_8c_a2094bd7cf232d8d97c1af4a34dd2b723}\label{fan_8c_a2094bd7cf232d8d97c1af4a34dd2b723}} 
+void \mbox{\hyperlink{fan_8c_a2094bd7cf232d8d97c1af4a34dd2b723}{Scr\+Pulse\+Tr}} (void)
+\begin{DoxyCompactList}\small\item\em Generates 2 mS pulse to trigger fan S\+CR and Starts A\+DC sampling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fan_8c_a048aee8573ecf21ed79e5c058fdf094d}\label{fan_8c_a048aee8573ecf21ed79e5c058fdf094d}} 
+void \mbox{\hyperlink{fan_8c_a048aee8573ecf21ed79e5c058fdf094d}{Fan\+Full\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Turns on G\+P\+IO o/p pin of fan S\+CR for full AC vtg cycle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fan_8c_a9aba447a5922b004e5283c120e1b5782}\label{fan_8c_a9aba447a5922b004e5283c120e1b5782}} 
+void \mbox{\hyperlink{fan_8c_a9aba447a5922b004e5283c120e1b5782}{Fan\+\_\+\+Off\+\_\+\+Speed}} (void)
+\begin{DoxyCompactList}\small\item\em Turns off fan if speed is 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fan_8c_ae2bf6e9d1d0cb94651d33913e9b038a0}{Fan\+Speed\+Ind\+Update}} (int8\+\_\+t)
+\item 
+\mbox{\Hypertarget{fan_8c_aa1fc5d33fce866bbc6603dbd846b2c33}\label{fan_8c_aa1fc5d33fce866bbc6603dbd846b2c33}} 
+void \mbox{\hyperlink{fan_8c_aa1fc5d33fce866bbc6603dbd846b2c33}{Gpio\+Zero\+Cross\+Det\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes gpio pin as interrupt for rising edge trigger. For detecting zero crossing of AC vtg. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fan_8c_a97e91f37867e6a69ff463aac7c076b84}{Port\+F\+Int\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em I\+SR for zero crossing.\+Update \& Starts timer1 (After that time S\+CR will be triggered) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{fan_8c_a4c3218a32d123aa70edfaa91c893430a}{Vtg\+Swing\+Corr}} (float)
+\item 
+void \mbox{\hyperlink{fan_8c_a70802c5e162d9fbfeb1f6a27b293dc04}{Ac\+Vtg\+Rms}} (uint32\+\_\+t)
+\item 
+\mbox{\Hypertarget{fan_8c_a4bcca014a8288be81434b4be67f45b5a}\label{fan_8c_a4bcca014a8288be81434b4be67f45b5a}} 
+void \mbox{\hyperlink{fan_8c_a4bcca014a8288be81434b4be67f45b5a}{Timer2\+B\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Timer2B for pulse generation, S\+CR trigger pulse (2 mS) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fan_8c_a54477abd8e414c05f46a271e91282a14}\label{fan_8c_a54477abd8e414c05f46a271e91282a14}} 
+void \mbox{\hyperlink{fan_8c_a54477abd8e414c05f46a271e91282a14}{Timer2\+B\+Int\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em S\+CR pulse\+:I\+SR for Timer2B, Turns off S\+CR gpio pin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fan_8c_a2806444250f7a6b55ea9b3ac603a52ae}\label{fan_8c_a2806444250f7a6b55ea9b3ac603a52ae}} 
+void \mbox{\hyperlink{fan_8c_a2806444250f7a6b55ea9b3ac603a52ae}{Timer1\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Timer1 for Scr trigger delay i.\+e. from 0 to 10 mS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fan_8c_a65c79b40bb1ef0170ed09c5cd657f0f0}\label{fan_8c_a65c79b40bb1ef0170ed09c5cd657f0f0}} 
+void \mbox{\hyperlink{fan_8c_a65c79b40bb1ef0170ed09c5cd657f0f0}{Timer1\+Int\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em I\+SR for full Timer1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fan_8c_a4aee6db188db234c1dcf4d17cc24eb03}\label{fan_8c_a4aee6db188db234c1dcf4d17cc24eb03}} 
+void \mbox{\hyperlink{fan_8c_a4aee6db188db234c1dcf4d17cc24eb03}{A\+D\+C1\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em A\+DC module 1 initialize. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fan_8c_a34151cc19c669d08c8af5a052f124036}\label{fan_8c_a34151cc19c669d08c8af5a052f124036}} 
+void \mbox{\hyperlink{fan_8c_a34151cc19c669d08c8af5a052f124036}{Adc1\+Int\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Takes sampled adc value and calls \mbox{\hyperlink{fan_8c_a70802c5e162d9fbfeb1f6a27b293dc04}{Ac\+Vtg\+Rms(uint32\+\_\+t)}} to save AC rms vtg. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fan_8c_abd21c776a93df2601476bddeb3300e88}\label{fan_8c_abd21c776a93df2601476bddeb3300e88}} 
+void \mbox{\hyperlink{fan_8c_abd21c776a93df2601476bddeb3300e88}{Fan\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes fan S\+CR driving port pin and A\+DC pin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fan_8c_ad844825b3c02e9f2d77e61052acc3e4b}\label{fan_8c_ad844825b3c02e9f2d77e61052acc3e4b}} 
+void \mbox{\hyperlink{fan_8c_ad844825b3c02e9f2d77e61052acc3e4b}{Fan\+\_\+\+On}} ()
+\begin{DoxyCompactList}\small\item\em Turns on the fan, Fan speed rxed from \mbox{\hyperlink{fan_8h_a5459e7f51c969d8b256e9b5586317f92}{Fan\+\_\+\+Speed\+\_\+\+Update(int8\+\_\+t)}} function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fan_8c_ab4c319da0d19780898b03a9b5ab658fe}\label{fan_8c_ab4c319da0d19780898b03a9b5ab658fe}} 
+void \mbox{\hyperlink{fan_8c_ab4c319da0d19780898b03a9b5ab658fe}{Fan\+\_\+\+Off}} ()
+\begin{DoxyCompactList}\small\item\em Turns off fan speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fan_8c_a45f472c9acb1834dd933b03ee530daf2}{Fan\+\_\+\+Speed\+\_\+\+Update}} (int8\+\_\+t Fan\+Speed)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fan_8c_a8d052979b138e8400ec8b8bb9601351b}\label{fan_8c_a8d052979b138e8400ec8b8bb9601351b}} 
+float {\bfseries Scr\+Trg\+Delay} = 5.\+0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Driver for fan controlling. 
+
+\begin{DoxyAuthor}{Author}
+Akshay Pampatwar 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15th April 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fan_8c_a70802c5e162d9fbfeb1f6a27b293dc04}\label{fan_8c_a70802c5e162d9fbfeb1f6a27b293dc04}} 
+\index{fan.c@{fan.c}!AcVtgRms@{AcVtgRms}}
+\index{AcVtgRms@{AcVtgRms}!fan.c@{fan.c}}
+\doxysubsubsection{\texorpdfstring{AcVtgRms()}{AcVtgRms()}}
+{\footnotesize\ttfamily void Ac\+Vtg\+Rms (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{A\+D\+C\+Value }\end{DoxyParamCaption})}
+
+Convert A\+DC sample into AC rms vtg and saves in Vrms variable. 
+\begin{DoxyParams}{Parameters}
+{\em A\+DC} & Reading\+: (uint32\+\_\+t) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 217 of file fan.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{fan_8c_a70802c5e162d9fbfeb1f6a27b293dc04_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{fan_8c_a45f472c9acb1834dd933b03ee530daf2}\label{fan_8c_a45f472c9acb1834dd933b03ee530daf2}} 
+\index{fan.c@{fan.c}!Fan\_Speed\_Update@{Fan\_Speed\_Update}}
+\index{Fan\_Speed\_Update@{Fan\_Speed\_Update}!fan.c@{fan.c}}
+\doxysubsubsection{\texorpdfstring{Fan\_Speed\_Update()}{Fan\_Speed\_Update()}}
+{\footnotesize\ttfamily void Fan\+\_\+\+Speed\+\_\+\+Update (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+Changes fan speed. 
+\begin{DoxyParams}{Parameters}
+{\em Fan\+Speed} & Fan speed from 0 to 5. lower limit should not be less than 0. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 126 of file fan.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{fan_8c_a45f472c9acb1834dd933b03ee530daf2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{fan_8c_ae2bf6e9d1d0cb94651d33913e9b038a0}\label{fan_8c_ae2bf6e9d1d0cb94651d33913e9b038a0}} 
+\index{fan.c@{fan.c}!FanSpeedIndUpdate@{FanSpeedIndUpdate}}
+\index{FanSpeedIndUpdate@{FanSpeedIndUpdate}!fan.c@{fan.c}}
+\doxysubsubsection{\texorpdfstring{FanSpeedIndUpdate()}{FanSpeedIndUpdate()}}
+{\footnotesize\ttfamily void Fan\+Speed\+Ind\+Update (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{Fan\+Speed }\end{DoxyParamCaption})}
+
+Turns on indicator L\+ED depending on fan speed 
+\begin{DoxyParams}{Parameters}
+{\em Fan\+Speed} & 0 to 5 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 161 of file fan.\+c.
+
+\mbox{\Hypertarget{fan_8c_a97e91f37867e6a69ff463aac7c076b84}\label{fan_8c_a97e91f37867e6a69ff463aac7c076b84}} 
+\index{fan.c@{fan.c}!PortFIntHandler@{PortFIntHandler}}
+\index{PortFIntHandler@{PortFIntHandler}!fan.c@{fan.c}}
+\doxysubsubsection{\texorpdfstring{PortFIntHandler()}{PortFIntHandler()}}
+{\footnotesize\ttfamily void Port\+F\+Int\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+I\+SR for zero crossing.\+Update \& Starts timer1 (After that time S\+CR will be triggered) 
+
+Zero crossing detection I\+SR\+: Triggers Timer1 for S\+CR trigger delay. 
+
+Definition at line 307 of file fan.\+c.
+
+\mbox{\Hypertarget{fan_8c_a4c3218a32d123aa70edfaa91c893430a}\label{fan_8c_a4c3218a32d123aa70edfaa91c893430a}} 
+\index{fan.c@{fan.c}!VtgSwingCorr@{VtgSwingCorr}}
+\index{VtgSwingCorr@{VtgSwingCorr}!fan.c@{fan.c}}
+\doxysubsubsection{\texorpdfstring{VtgSwingCorr()}{VtgSwingCorr()}}
+{\footnotesize\ttfamily float Vtg\+Swing\+Corr (\begin{DoxyParamCaption}\item[{float}]{trigger\+Angle }\end{DoxyParamCaption})}
+
+Correction of S\+CR trigger time depending on Line freq and AC rms voltage. 
+\begin{DoxyParams}{Parameters}
+{\em Trigger\+\_\+angle} & (0 to 180) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Scr Trigger delay\+: (mS) Corresponding to i/p trigger angle \& AC vgt correction. 
+\end{DoxyReturn}
+
+
+Definition at line 152 of file fan.\+c.
+

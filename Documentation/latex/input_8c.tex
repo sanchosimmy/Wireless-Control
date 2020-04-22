@@ -1,0 +1,80 @@
+\hypertarget{input_8c}{}\doxysection{C\+:/\+Users/\+Akshay/workspace\+\_\+v6\+\_\+0/\+Wireless\+\_\+\+Control/input.c File Reference}
+\label{input_8c}\index{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/input.c@{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/input.c}}
+
+
+Driver for scanning switches.  
+
+
+{\ttfamily \#include \char`\"{}input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}commonheader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globalvariable.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pinmap.\+h\char`\"{}}\newline
+Include dependency graph for input.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{input_8c_a00aef9e8dd001a49f8717031d84b2c6c}\label{input_8c_a00aef9e8dd001a49f8717031d84b2c6c}} 
+\#define {\bfseries D\+E\+B\+O\+U\+N\+C\+E\+\_\+\+T\+I\+ME}~20
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{input_8c_a5b83d6f82fe6a690e947a091d9a7f0a4}\label{input_8c_a5b83d6f82fe6a690e947a091d9a7f0a4}} 
+void {\bfseries Fan\+Speed\+Update} (void)
+\item 
+\mbox{\Hypertarget{input_8c_a1f5fdd46fbe2c20cb8971dae6556b796}\label{input_8c_a1f5fdd46fbe2c20cb8971dae6556b796}} 
+void {\bfseries Led\+Brightness\+Update} (void)
+\item 
+\mbox{\Hypertarget{input_8c_ab6d895e09540216fe11d738e09898794}\label{input_8c_ab6d895e09540216fe11d738e09898794}} 
+void \mbox{\hyperlink{input_8c_ab6d895e09540216fe11d738e09898794}{Input\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Middle layer fn. Initializes G\+P\+IO as an input for all the switches. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{input_8c_aa824b14a8fe97b88f0ba0ed98a3e1791}{Gpip}} (uint32\+\_\+t current\+IP)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Driver for scanning switches. 
+
+\begin{DoxyAuthor}{Author}
+Akshay Pampatwar 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11th April 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{input_8c_aa824b14a8fe97b88f0ba0ed98a3e1791}\label{input_8c_aa824b14a8fe97b88f0ba0ed98a3e1791}} 
+\index{input.c@{input.c}!Gpip@{Gpip}}
+\index{Gpip@{Gpip}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{Gpip()}{Gpip()}}
+{\footnotesize\ttfamily void Gpip (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{current\+IP }\end{DoxyParamCaption})}
+
+I\+SR\+: Called after every debounce period (20mS). Gate called from H\+AL to Middle layer
+
+(i)Take care of bounce back effect of switches. (ii)Updates Changed in a output to a global variable related to home appliances. 
+\begin{DoxyParams}{Parameters}
+{\em current\+IP} & \+: 32 bit which is an encoded status of all switches interface with Port A and Port D. 2nd last byte = Port A \& L\+S\+Byte = Port D \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file input.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{input_8c_aa824b14a8fe97b88f0ba0ed98a3e1791_icgraph}
+\end{center}
+\end{figure}

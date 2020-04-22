@@ -1,0 +1,78 @@
+\hypertarget{bluetooth_8c}{}\doxysection{C\+:/\+Users/\+Akshay/workspace\+\_\+v6\+\_\+0/\+Wireless\+\_\+\+Control/bluetooth.c File Reference}
+\label{bluetooth_8c}\index{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/bluetooth.c@{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/bluetooth.c}}
+
+
+Driver for bluetooth module.  
+
+
+{\ttfamily \#include \char`\"{}bluetooth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}commonheader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globalvariable.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pinmap.\+h\char`\"{}}\newline
+Include dependency graph for bluetooth.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bluetooth_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bluetooth_8c_ab92a40e570f765fd05c7c411f7a4d712}{Sys\+\_\+\+Uart\+Init}} (uint32\+\_\+t)
+\item 
+\mbox{\Hypertarget{bluetooth_8c_a2d4a537012aed004dd52d798fcc7498c}\label{bluetooth_8c_a2d4a537012aed004dd52d798fcc7498c}} 
+void \mbox{\hyperlink{bluetooth_8c_a2d4a537012aed004dd52d798fcc7498c}{U\+A\+R\+T2\+Int\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Triggers when required depth of data rxed on Rx F\+I\+FO. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{bluetooth_8c_a2ae308c73a93ebe0b32457e072f32a84}\label{bluetooth_8c_a2ae308c73a93ebe0b32457e072f32a84}} 
+void \mbox{\hyperlink{bluetooth_8c_a2ae308c73a93ebe0b32457e072f32a84}{Get\+Uart\+Data}} (int32\+\_\+t Rx\+Temp)
+\begin{DoxyCompactList}\small\item\em Gate fn for H\+AL to ML. I\+SR for rxed data for U\+A\+RT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{bluetooth_8c_a3931d6c801713463f51609ad20223707}\label{bluetooth_8c_a3931d6c801713463f51609ad20223707}} 
+void \mbox{\hyperlink{bluetooth_8c_a3931d6c801713463f51609ad20223707}{Wip\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Wireless input initialization for U\+A\+RT to serially communicate with bluetooth module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{bluetooth_8c_a3948594ac93f0c5008fee3efcb07de77}\label{bluetooth_8c_a3948594ac93f0c5008fee3efcb07de77}} 
+const uint32\+\_\+t {\bfseries B\+A\+U\+D\+R\+A\+TE} = 9600
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Driver for bluetooth module. 
+
+\begin{DoxyAuthor}{Author}
+Akshay Pampatwar 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10th April 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{bluetooth_8c_ab92a40e570f765fd05c7c411f7a4d712}\label{bluetooth_8c_ab92a40e570f765fd05c7c411f7a4d712}} 
+\index{bluetooth.c@{bluetooth.c}!Sys\_UartInit@{Sys\_UartInit}}
+\index{Sys\_UartInit@{Sys\_UartInit}!bluetooth.c@{bluetooth.c}}
+\doxysubsubsection{\texorpdfstring{Sys\_UartInit()}{Sys\_UartInit()}}
+{\footnotesize\ttfamily void Sys\+\_\+\+Uart\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Baud\+Rate }\end{DoxyParamCaption})}
+
+Initializez U\+A\+RT module 2 and setup I\+SR for rxed data 
+\begin{DoxyParams}{Parameters}
+{\em Baud\+\_\+\+Rate} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file bluetooth.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{bluetooth_8c_ab92a40e570f765fd05c7c411f7a4d712_icgraph}
+\end{center}
+\end{figure}

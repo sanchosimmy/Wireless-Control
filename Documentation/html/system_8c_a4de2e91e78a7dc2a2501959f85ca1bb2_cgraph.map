@@ -1,0 +1,5 @@
+<map id="Timer0Init" name="Timer0Init">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,84,32"/>
+<area shape="rect" id="node2" href="$system_8c.html#a74ceb5fbff5fd971c473d77538d3ea8c" title="ISR for Timer0 : Reads port A and D, packs it and passed on to Gpip() fn in input...." alt="" coords="132,5,251,32"/>
+<area shape="rect" id="node3" href="$input_8c.html#aa824b14a8fe97b88f0ba0ed98a3e1791" title=" " alt="" coords="299,5,348,32"/>
+</map>

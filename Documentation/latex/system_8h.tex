@@ -1,0 +1,111 @@
+\hypertarget{system_8h}{}\doxysection{C\+:/\+Users/\+Akshay/workspace\+\_\+v6\+\_\+0/\+Wireless\+\_\+\+Control/system.h File Reference}
+\label{system_8h}\index{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/system.h@{C:/Users/Akshay/workspace\_v6\_0/Wireless\_Control/system.h}}
+
+
+Fn prototypes for peripherals of tm4c123gh6pm uC.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for system.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{system_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{system_8h_adfdb874494a7e96ac1256869f1a7e9d4}\label{system_8h_adfdb874494a7e96ac1256869f1a7e9d4}} 
+void \mbox{\hyperlink{system_8h_adfdb874494a7e96ac1256869f1a7e9d4}{Sys\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes system with 20M\+Hz C\+PU Clock and enable clk to all required ports. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{system_8h_acf611d90e359ddd37bf100b55febf8bb}{Sys\+\_\+\+Gpip\+Init}} (uint32\+\_\+t debounce)
+\item 
+\mbox{\Hypertarget{system_8h_a5b5e85126ae4035f07abce9b1351eb9f}\label{system_8h_a5b5e85126ae4035f07abce9b1351eb9f}} 
+void \mbox{\hyperlink{system_8h_a5b5e85126ae4035f07abce9b1351eb9f}{Sys\+\_\+\+Eeprom\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Init eeprom. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{system_8h_af287be012af33e6521b17064706323dc}{Sys\+\_\+\+Restore\+\_\+\+Byte}} (int8\+\_\+t address)
+\item 
+void \mbox{\hyperlink{system_8h_a95a32c6f93e18ebbb8ddd02e88014d01}{Sys\+\_\+\+Store\+\_\+\+Byte}} (int8\+\_\+t value, int8\+\_\+t address)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fn prototypes for peripherals of tm4c123gh6pm uC. 
+
+H\+AL\+: Hardware abstraction layer. Functions to initialize required peripherals of tm4c123gh6pm uC. \begin{DoxyAuthor}{Author}
+Akshay Pampatwar 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+9th April 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{system_8h_acf611d90e359ddd37bf100b55febf8bb}\label{system_8h_acf611d90e359ddd37bf100b55febf8bb}} 
+\index{system.h@{system.h}!Sys\_GpipInit@{Sys\_GpipInit}}
+\index{Sys\_GpipInit@{Sys\_GpipInit}!system.h@{system.h}}
+\doxysubsubsection{\texorpdfstring{Sys\_GpipInit()}{Sys\_GpipInit()}}
+{\footnotesize\ttfamily void Sys\+\_\+\+Gpip\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{debounce }\end{DoxyParamCaption})}
+
+Initializes G\+P\+I\+Os as an input for switches and Timer 0 to take care of debounce. 
+\begin{DoxyParams}{Parameters}
+{\em debounce} & \+: Debounce Time setting for switches \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file system.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{system_8h_acf611d90e359ddd37bf100b55febf8bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8h_af287be012af33e6521b17064706323dc}\label{system_8h_af287be012af33e6521b17064706323dc}} 
+\index{system.h@{system.h}!Sys\_Restore\_Byte@{Sys\_Restore\_Byte}}
+\index{Sys\_Restore\_Byte@{Sys\_Restore\_Byte}!system.h@{system.h}}
+\doxysubsubsection{\texorpdfstring{Sys\_Restore\_Byte()}{Sys\_Restore\_Byte()}}
+{\footnotesize\ttfamily int8\+\_\+t Sys\+\_\+\+Restore\+\_\+\+Byte (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+Returns content from eeprom corresponding to address passed to it. 
+\begin{DoxyParams}{Parameters}
+{\em address} & 0 to n $\vert$ n belongs to Natural number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Byte (int8\+\_\+t)\+: From addressed passed 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file system.\+c.
+
+\mbox{\Hypertarget{system_8h_a95a32c6f93e18ebbb8ddd02e88014d01}\label{system_8h_a95a32c6f93e18ebbb8ddd02e88014d01}} 
+\index{system.h@{system.h}!Sys\_Store\_Byte@{Sys\_Store\_Byte}}
+\index{Sys\_Store\_Byte@{Sys\_Store\_Byte}!system.h@{system.h}}
+\doxysubsubsection{\texorpdfstring{Sys\_Store\_Byte()}{Sys\_Store\_Byte()}}
+{\footnotesize\ttfamily void Sys\+\_\+\+Store\+\_\+\+Byte (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{value,  }\item[{int8\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+Store passed contents to an eeprom. 
+\begin{DoxyParams}{Parameters}
+{\em value} & 8 bit data which needs to be stored \\
+\hline
+{\em address} & 0 to n $\vert$ n belongs to Natural number \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file system.\+c.
+
