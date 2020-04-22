@@ -52,4 +52,5 @@ For time being, for simplicity many HAL functions are defined in a Middle layer 
 
 (vi)New commands of fan speed and intensity will be saved in an eeprom.
 
+	Read files from Documentation\html folder for more info on software / code.
 */
