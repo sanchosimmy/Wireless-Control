@@ -1,10 +1,10 @@
 /**
 @mainpage Wireless home appliances control.
 
-@author Akshay Pampatwar 
-@author Sancho Simmy Louis 
-@author Nijil George 
-@author Sabitha Susan Joseph 
+@author Akshay Pampatwar (Software)
+@author Sancho Simmy Louis (Hardware Circuit Design)
+@author Nijil George (Android App)
+@author Sabitha Susan Joseph (PCB Design)
 
 Appliances can be controlled via switches on a control board or a bluetooth mobile app. This project is developed for Tiva C tm4c123gh6pm uC. It can control following appliances:
 
